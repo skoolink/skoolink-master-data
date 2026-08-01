@@ -55,6 +55,11 @@
         "domain": "https://siwangi.skoolink.id"
     },
     {
+        "code": "1006",
+        "name": "TK Al Lathifiyah 3",
+        "domain": "https://tkallathifiyah3.skoolink.id/"
+    },
+    {
         "code": "9999",
         "name": "Skoolink Ali",
         "domain": "http://10.11.1.34"
