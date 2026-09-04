@@ -35,6 +35,8 @@ collections:
         widget: string
       - name: photo
         widget: image
+      - name: body
+        widget: richtext
 
   - name: administrative_area
     label: Administrative Area
