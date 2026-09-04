@@ -7,7 +7,7 @@ app_title: Master Data Skoolink
 
 backend:
   name: github
-  repo: inalix/sandbox
+  repo: inalix/inalix.github.io
   branch: main
   base_url: https://sve-auth.styawan.workers.dev
 
