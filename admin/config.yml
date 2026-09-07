@@ -3,18 +3,40 @@ logo:
   src: skoolink.png
   show_in_header: true
 
-app_title: Master Data
+app_title: Master Data Skoolink
 
 backend:
   name: github
-  repo: inalix/skoolink-master-data
+  repo: skoolink/skoolink-master-data
   branch: content
-  base_url: https://sve-auth.styawan.workers.dev
+  base_url: https://cms-auth.skoolink.id/
 
-media_folder: static/media
+media_folder: static/uploads
 public_folder: /media
 
 collections:
+  - name: team
+    label: Team
+    identifier_field: name
+    path: '{{slug}}/index'
+    folder: /data-team
+    public_folder: .
+    media_folder: .
+    description: Mau dikasih deskripsion apa collections ini?
+    summary: "{{name}} lahir {{birthday}}"
+    editor:
+      preview: false
+    fields:
+      - name: name
+        widget: string
+      - name: birthday
+        widget: datetime
+      - name: division
+        widget: string
+      - name: photo
+        widget: image
+      - name: body
+        widget: richtext
 
   - name: administrative_area
     label: Administrative Area
