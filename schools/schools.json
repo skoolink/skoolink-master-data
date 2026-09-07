@@ -1,5 +1,4 @@
-// File ini digenerate otomatis oleh scripts/build_schools.py. Jangan diedit manual.
-export const schools = [
+[
   {
     "name": "Sekolah ke Tujuh",
     "code": "0007",
@@ -12,6 +11,4 @@ export const schools = [
     "domain_name": "demo.skoolink.id",
     "logo": "logo/3331.webp"
   }
-];
-
-export default schools;
+]
