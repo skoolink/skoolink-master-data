@@ -26,4 +26,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: public # branch lain
+          target-folder: schools
+          branch: public
+          force: false
