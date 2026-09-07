@@ -19,4 +19,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: admin
+          target-folder: admin
           branch: public
+          force: false # dari banyak sumber
