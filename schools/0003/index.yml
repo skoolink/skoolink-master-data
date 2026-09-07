@@ -1,4 +1,5 @@
-code: '3331'
 name: demo skoolink
-domain_name: https://demo.skoolink.id
+code: '3331'
+domain_name: demo.skoolink.id
+logo: ./logo-skoolink.png
 image: /media/cat1.jpeg
