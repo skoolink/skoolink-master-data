@@ -4,7 +4,7 @@ build_schools.py
 
 Alternatif Python untuk build-schools.sh. Membaca semua entry Sveltia CMS
 collection "schools" di schools/<slug>/index.yaml, lalu:
-  1. Menggabungkan semua entry jadi satu file dist/schools.js (ES module)
+  1. Menggabungkan semua entry jadi satu file dist/schools.json (JSON array)
   2. Menyalin logo tiap sekolah ke dist/logo/<code>.webp
 
 Dependency: PyYAML (pip install pyyaml). Python 3 sudah tersedia di
@@ -110,16 +110,10 @@ def main() -> int:
 
     entries.sort(key=lambda e: e["code"])
 
-    js_content = (
-        "// File ini digenerate otomatis oleh scripts/build_schools.py. "
-        "Jangan diedit manual.\n"
-        f"export const schools = {json.dumps(entries, indent=2, ensure_ascii=False)};\n"
-        "\n"
-        "export default schools;\n"
-    )
-    (DIST_DIR / "schools.js").write_text(js_content, encoding="utf-8")
+    json_content = json.dumps(entries, indent=2, ensure_ascii=False) + "\n"
+    (DIST_DIR / "schools.json").write_text(json_content, encoding="utf-8")
 
-    print(f"OK: {count} sekolah diproses -> {DIST_DIR / 'schools.js'}")
+    print(f"OK: {count} sekolah diproses -> {DIST_DIR / 'schools.json'}")
     print(f"Logo disalin ke: {LOGO_DIR}/")
     return 0
 
