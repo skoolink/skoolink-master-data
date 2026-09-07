@@ -7,7 +7,11 @@ on:
     paths:
       - "schools/**"
       - "scripts/build_schools.py"
+      - ".github/workflows/deploy-schools.yaml"
   workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 jobs:
   build:
