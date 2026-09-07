@@ -3,6 +3,17 @@ logo:
   src: skoolink.png
   show_in_header: true
 
+media_libraries:
+  all:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 85
+        width: 1024
+        height: 1024
+      svg:
+        optimize: true
+
 app_title: Master Data Skoolink
 
 backend:
@@ -11,32 +22,41 @@ backend:
   branch: content
   base_url: https://cms-auth.skoolink.id/
 
-media_folder: static/uploads
+media_folder: static/media
 public_folder: /media
 
 collections:
-  - name: team
-    label: Team
-    identifier_field: name
-    path: '{{slug}}/index'
-    folder: /data-team
+  - name: schools
+    label: Schools
+    folder: /schools
+    path: "{{slug}}/index"
+    identifier_field: code
+    summary: "{{code}} {{name}}"
     public_folder: .
     media_folder: .
-    description: Mau dikasih deskripsion apa collections ini?
-    summary: "{{name}} lahir {{birthday}}"
+    format: yaml
     editor:
       preview: false
     fields:
-      - name: name
+      - label: Name
+        name: name
         widget: string
-      - name: birthday
-        widget: datetime
-      - name: division
+      - label: Code
+        name: code
+        maxlength: 4
         widget: string
-      - name: photo
+        pattern:
+          - '^\d{4}$'
+          - "Harus diisi tepat 4 digit angka (contoh: 0001)"
+      - label: Domain
+        name: domain_name
+        widget: string
+        pattern:
+          - '^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$'
+          - "Masukkan nama domain yang valid (contoh: domain.com atau sub.domain.co.id)"
+      - label: Logo
+        name: logo
         widget: image
-      - name: body
-        widget: richtext
 
   - name: administrative_area
     label: Administrative Area
@@ -131,3 +151,26 @@ collections:
       - label: Name
         name: name
         widget: string
+
+  - name: team
+    label: Team
+    identifier_field: name
+    path: '{{slug}}/index'
+    folder: /data-team
+    public_folder: .
+    media_folder: .
+    description: Mau dikasih deskripsion apa collections ini?
+    summary: "{{name}} lahir {{birthday}}"
+    editor:
+      preview: false
+    fields:
+      - name: name
+        widget: string
+      - name: birthday
+        widget: datetime
+      - name: division
+        widget: string
+      - name: photo
+        widget: image
+      - name: body
+        widget: richtext
