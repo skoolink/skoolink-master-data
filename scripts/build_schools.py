@@ -77,12 +77,14 @@ def main() -> int:
             data = yaml.safe_load(f) or {}
 
         code = str(data.get("code") or "").strip()
+        domain_name = str(data.get("domain_name") or "").strip()
         if not code:
             print(f"Skip: field 'code' kosong di {yaml_file}", file=sys.stderr)
             continue
 
         logo_value = data.get("logo")
         logo_dest_rel = f"logo/{code}.webp"
+        domain_url = f"http://{domain_name}/"
 
         if logo_value:
             src_logo = resolve_logo_path(entry_dir, str(logo_value))
@@ -102,6 +104,7 @@ def main() -> int:
             {
                 "name": data.get("name"),
                 "code": code,
+                "domain": domain_url,
                 "domain_name": data.get("domain_name"),
                 "logo": logo_dest_rel,
             }
