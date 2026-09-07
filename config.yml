@@ -9,20 +9,20 @@ backend:
   name: github
   repo: skoolink/skoolink-master-data
   branch: content
-  base_url: https://skoolink-auth.gorraboo.workers.dev/
+  base_url: https://cms-auth.skoolink.id/
 
 media_folder: static/uploads
 public_folder: /media
 
 collections:
   - name: team
-    label: Team 
+    label: Team
     identifier_field: name
-    path: '{{slug}}/index' 
+    path: '{{slug}}/index'
     folder: /data-team
     public_folder: .
     media_folder: .
-    description: Apa ya kira-kira
+    description: Mau dikasih deskripsion apa collections ini?
     summary: "{{name}} lahir {{birthday}}"
     editor:
       preview: false
