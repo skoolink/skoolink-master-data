@@ -99,6 +99,7 @@ collections:
 
   - name: provinces
     label: Province
+    icon: map
     folder: /provinces
     identifier_field: code
     summary: "{{slug}} {{name}}"
@@ -125,6 +126,7 @@ collections:
 
   - name: districts
     label: District
+    icon: location_city
     folder: /districts
     identifier_field: code
     summary: "{{slug}} {{name}}"
