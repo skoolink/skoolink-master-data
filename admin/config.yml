@@ -20,7 +20,7 @@ backend:
   name: github
   repo: skoolink/skoolink-master-data
   branch: content
-  base_url: https://cms-auth.skoolink.id/
+  base_url: https://skoolink-auth.gorraboo.workers.dev/
 
 media_folder: static/media
 public_folder: /media
