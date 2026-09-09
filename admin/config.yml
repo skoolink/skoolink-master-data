@@ -28,6 +28,7 @@ public_folder: /media
 collections:
   - name: schools
     label: Schools
+    icon: school
     folder: /schools
     path: "{{slug}}/index"
     identifier_field: code
@@ -57,6 +58,8 @@ collections:
       - label: Logo
         name: logo
         widget: image
+
+  - divider: true
 
   - name: administrative_area
     label: Administrative Area
@@ -120,7 +123,6 @@ collections:
         center: [106.827168,-6.1754049] 
         zoom: 11
 
-
   - name: districts
     label: District
     folder: /districts
@@ -152,8 +154,11 @@ collections:
         name: name
         widget: string
 
+  - divider: true
+
   - name: team
     label: Team
+    icon: group
     identifier_field: name
     path: '{{slug}}/index'
     folder: /data-team
