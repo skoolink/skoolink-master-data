@@ -166,12 +166,17 @@ collections:
     folder: /data-team
     public_folder: .
     media_folder: .
-    description: Mau dikasih deskripsion apa collections ini?
-    summary: "{{name}} lahir {{birthday}}"
+    description: Informasi tentang team inalix
     editor:
       preview: false
     fields:
       - name: name
+        label: Username
+        widget: string
+        pattern:
+          - '^[a-zA-Z][a-zA-Z0-9]{2,11}$'
+          - "Username harus 3-12 karakter, diawali huruf, dan hanya boleh berisi huruf dan angka."
+      - name: fullname
         widget: string
       - name: birthday
         widget: datetime
