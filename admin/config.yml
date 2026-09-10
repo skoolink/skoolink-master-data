@@ -52,12 +52,14 @@ collections:
       - label: Domain
         name: domain_name
         widget: string
+        required: false
         pattern:
           - '^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$'
           - "Masukkan nama domain yang valid (contoh: domain.com atau sub.domain.co.id)"
       - label: Logo
         name: logo
         widget: image
+        required: false
 
   - divider: true
 
@@ -123,6 +125,7 @@ collections:
         type: Point
         center: [106.827168,-6.1754049] 
         zoom: 11
+        required: false
 
   - name: districts
     label: District
@@ -182,7 +185,10 @@ collections:
         widget: datetime
       - name: division
         widget: string
+        required: false
       - name: photo
         widget: image
+        required: false
       - name: body
         widget: richtext
+        required: false
