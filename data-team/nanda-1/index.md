@@ -1,7 +1,9 @@
 ---
-name: nanda
+name: nanda1
 fullname: nanda yana
 birthday: 2026-09-10T13:36:00
 division: IT
-photo: ''
+photo: ./plm.webp
 ---
+
+tes
