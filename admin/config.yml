@@ -60,6 +60,10 @@ collections:
         name: logo
         widget: image
         required: false
+      - label: Note
+        name: note
+        widget: text
+        required: false
 
   - divider: true
 
