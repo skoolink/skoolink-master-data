@@ -42,6 +42,9 @@ collections:
       - label: Name
         name: name
         widget: string
+      - label: warna
+        name: warna
+        widget: color
       - label: Code
         name: code
         maxlength: 4
