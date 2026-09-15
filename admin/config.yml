@@ -136,7 +136,7 @@ collections:
     icon: location_city
     folder: /districts
     identifier_field: code
-    summary: "{{slug}} {{name}}, {{provinces.name}}"
+    summary: "{{slug}} {{name}}"
     format: json
     view_groups:
       - field: province
