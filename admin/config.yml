@@ -42,9 +42,6 @@ collections:
       - label: Name
         name: name
         widget: string
-      - label: warna
-        name: warna
-        widget: color
       - label: Code
         name: code
         maxlength: 4
@@ -66,6 +63,16 @@ collections:
       - label: Note
         name: note
         widget: text
+        required: false
+      - label: Warna
+        name: warna
+        widget: color
+        required: false
+      - name: location
+        widget: map
+        type: Point
+        center: [106.827168,-6.1754049] 
+        zoom: 12
         required: false
 
   - divider: true
