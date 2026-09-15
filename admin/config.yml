@@ -108,7 +108,7 @@ collections:
     icon: map
     folder: /provinces
     identifier_field: code
-    summary: "{{slug}} {{name}}"
+    summary: "{{code}} {{name}}"
     format: yaml
     editor:
       preview: false
@@ -153,7 +153,7 @@ collections:
         widget: relation
         collection: provinces
         display_fields:
-        - slug
+        - code
         - name
       - label: Code
         name: code
