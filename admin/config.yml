@@ -18,8 +18,8 @@ app_title: Master Data Skoolink
 
 backend:
   name: github
-  repo: skoolink/skoolink-master-data
-  branch: content
+  repo: skoolink/skoolink-site
+  branch: main
   base_url: https://skoolink-auth.gorraboo.workers.dev/
 
 media_folder: static/media
@@ -34,6 +34,10 @@ collections:
       - label: Judul
         name: title
         widget: string
+      - label: Tanggal
+        name: date
+        widget: datetime
+      
   - name: schools
     label: Schools
     icon: school
