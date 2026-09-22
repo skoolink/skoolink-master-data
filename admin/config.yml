@@ -30,6 +30,8 @@ collections:
   - name: promo
     label: Promo
     folder: /content/promo
+    editor:
+      preview: false
     fields:
       - label: Judul
         name: title
@@ -46,6 +48,19 @@ collections:
             widget: string
           - name: description
             label: Deskripsi
+            widget: string
+      - label: Contact Info
+        name: contact_info
+        widget: object
+        fields:
+          - name: email
+            label: Email
+            widget: string
+          - name: phone
+            label: Phone
+            widget: string
+          - name: website
+            label: Website
             widget: string
         
         
