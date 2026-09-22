@@ -108,6 +108,7 @@ collections:
       - label: Contact Info
         name: contact_info
         widget: object
+        required: false
         fields:
           - name: email
             label: Email Khusus Promo
