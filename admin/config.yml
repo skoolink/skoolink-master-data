@@ -37,6 +37,18 @@ collections:
       - label: Tanggal
         name: date
         widget: datetime
+      - label: Benefits
+        name: benefits
+        widget: list
+        fields:
+          - name: badge
+            label: Badge
+            widget: string
+          - name: description
+            label: Deskripsi
+            widget: string
+        
+        
       
   - name: schools
     label: Schools
