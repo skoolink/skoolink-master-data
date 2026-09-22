@@ -59,15 +59,7 @@ collections:
         widget: boolean
       - label: Jadikan Promo Unggulan?
         name: featured
-        widget: boolean 
-      - label: Judul Ajakan / Tagline
-        name: quote_box.title
-        widget: string 
-        required: false
-      - label: Teks Tambahan Banner
-        name: quote_box.subtext
-        widget: text      
-        required: false
+        widget: boolean
       - label: Judul Seksi Keunggulan
         name: benefits_title
         widget: string 
@@ -97,8 +89,21 @@ collections:
           - name: footer_note
             label: Catatan Kaki
             widget: string
-            required: false        
-          
+            required: false   
+            
+      - label: Banner Sorotan
+        name: quote_box
+        widget: object 
+        required: false
+          - name: title
+            label: Judul Ajakan / Tagline
+            widget: string
+            required: false
+          - name: subtext
+            label: Teks Tambahan Banner
+            widget: string
+            required: false 
+            
       - label: Contact Info
         name: contact_info
         widget: object
