@@ -89,12 +89,13 @@ collections:
           - name: footer_note
             label: Catatan Kaki
             widget: string
-            required: false   
+            required: false
             
       - label: Banner Sorotan
         name: quote_box
         widget: object 
         required: false
+        fields:
           - name: title
             label: Judul Ajakan / Tagline
             widget: string
@@ -102,7 +103,7 @@ collections:
           - name: subtext
             label: Teks Tambahan Banner
             widget: string
-            required: false 
+            required: false
             
       - label: Contact Info
         name: contact_info
@@ -115,7 +116,7 @@ collections:
           - name: phone
             label: Nomor WhatsApp Khusus
             widget: string
-            required: false 
+            required: false
           - name: website
             label: Tautan Web Khusus
             widget: string
