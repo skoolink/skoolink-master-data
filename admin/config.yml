@@ -25,7 +25,15 @@ backend:
 media_folder: static/media
 public_folder: /media
 
+
 collections:
+  - name: promo
+    label: Promo
+    folder: /content/promo
+    fields:
+      - label: Judul
+        name: title
+        widget: string
   - name: schools
     label: Schools
     icon: school
