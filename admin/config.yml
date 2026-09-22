@@ -56,12 +56,15 @@ collections:
           - name: email
             label: Email
             widget: string
+            required: false
           - name: phone
             label: Phone
             widget: string
+            required: false
           - name: website
             label: Website
             widget: string
+            required: true
         
         
       
