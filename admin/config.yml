@@ -33,13 +33,48 @@ collections:
     editor:
       preview: false
     fields:
-      - label: Judul
+      - label: Judul Promo
         name: title
         widget: string
-      - label: Tanggal
+      - label: Tanggal Publikasi
         name: date
         widget: datetime
-      - label: Benefits
+      - label: Label / Tag Promo
+        name: badge
+        widget: string 
+      - label: Ringkasan Singkat
+        name: summary
+        widget: text  
+      - label: Poster / Flyer Promo
+        name: image
+        widget: image 
+      - label: Ringkasan Paket Penawaran
+        name: offer_title
+        widget: string
+      - label: Periode / Masa Berlaku
+        name: offer_period
+        widget: string
+      - label: Status Promo Berakhir?
+        name: expired
+        widget: boolean
+      - label: Jadikan Promo Unggulan?
+        name: featured
+        widget: boolean 
+      - label: Judul Ajakan / Tagline
+        name: quote_box.title
+        widget: string 
+        required: false
+      - label: Teks Tambahan Banner
+        name: quote_box.subtext
+        widget: text      
+        required: false
+      - label: Judul Seksi Keunggulan
+        name: benefits_title
+        widget: string 
+      - label: Deskripsi Seksi Keunggulan
+        name: benefits_subtitle
+        widget: string  
+      - label: Daftar Poin Keunggulan
         name: benefits
         widget: list
         fields:
@@ -49,22 +84,37 @@ collections:
           - name: description
             label: Deskripsi
             widget: string
+          - name: icon
+            label: Ikon FontAwesome
+            widget: string
+          - name: title
+            label: Judul Keuntungan
+            widget: string
+          - name: id
+            label: ID
+            widget: number
+            required: false
+          - name: footer_note
+            label: Catatan Kaki
+            widget: string
+            required: false        
+          
       - label: Contact Info
         name: contact_info
         widget: object
         fields:
           - name: email
-            label: Email
+            label: Email Khusus Promo
             widget: string
             required: false
           - name: phone
-            label: Phone
+            label: Nomor WhatsApp Khusus
+            widget: string
+            required: false 
+          - name: website
+            label: Tautan Web Khusus
             widget: string
             required: false
-          - name: website
-            label: Website
-            widget: string
-            required: true
         
         
       
