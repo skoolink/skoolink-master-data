@@ -59,7 +59,8 @@ collections:
       - label: Kategori Utama
         name: categories
         widget: select
-        multiple: false
+        multiple: true
+        max: 1 
         options:
           - label: Digitalisasi Sekolah
             value: digitalisasi-sekolah
