@@ -69,7 +69,7 @@ collections:
         widget: list
         required: false
         field:
-          - label: Nama Tag
+            label: Nama Tag
             name: tag
             widget: string
       - label: Konten Artikel
