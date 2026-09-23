@@ -77,6 +77,19 @@ collections:
       - label: Konten Artikel
         name: body
         widget: richtext
+      - label: Warna Background
+        name: background_color
+        widget: color
+        enableAlpha: true
+        allowInput: true
+        default: '#00000090'
+      - label: Warna Teks
+        name: color
+        widget: color
+        enableAplha: false
+        allowInput: false
+        default: '#ffffff'
+        
   - name: promo
     label: Promo
     folder: content/promo
