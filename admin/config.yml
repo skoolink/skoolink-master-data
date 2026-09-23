@@ -59,9 +59,6 @@ collections:
       - label: Ringkasan Paket Penawaran
         name: offer_title
         widget: string
-      - label: Jadikan Promo Unggulan?
-        name: featured
-        widget: boolean
       - label: Judul Seksi Keunggulan
         name: benefits_title
         widget: string 
@@ -84,10 +81,6 @@ collections:
           - name: title
             label: Judul Keuntungan
             widget: string
-          - name: id
-            label: ID
-            widget: number
-            required: false
           - name: footer_note
             label: Catatan Kaki
             widget: string
