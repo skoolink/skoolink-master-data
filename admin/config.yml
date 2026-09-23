@@ -19,7 +19,7 @@ app_title: Master Data Skoolink
 backend:
   name: github
   repo: skoolink/skoolink-site
-  branch: main
+  branch: edit
   base_url: https://skoolink-auth.gorraboo.workers.dev/
 
 media_folder: static/img
