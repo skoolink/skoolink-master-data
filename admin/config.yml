@@ -27,6 +27,54 @@ public_folder: /img
 
 
 collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    media_folder: static/img/blog
+    public_folder: /img/blog
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - label: Judul Artikel
+        name: title
+        widget: string
+      - label: Tanggal Publikasi
+        name: date
+        widget: datetime
+      - label: Author
+        name: author
+        widget: string
+      - label: Gambar Artikel
+        name: image
+        widget: image
+      - label: Ringkasan Artikel
+        name: summary
+        widget: text
+      - label: Kategori Utama
+        name: categories
+        widget: select
+        multiple: false
+        options:
+          - label: Digitalisasi Sekolah
+            value: digitalisasi-sekolah
+          - label: Manajemen & Administrasi
+            value: manajemen-administrasi
+          - label: Hubungan Orang Tua & Sekolah
+            value: parenting-komunikasi
+          - label: Berita & Informas
+            value: berita-update
+      - label: tags
+        name: Tags
+        widget: list
+        required: false
+        field:
+          - label: Nama Tag
+          - name: tag
+          - widget: string
+      - label: Konten Artikel
+        name: body
+        widget: richtext
   - name: promo
     label: Promo
     folder: content/promo
