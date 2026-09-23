@@ -39,6 +39,11 @@ collections:
       - label: Judul Artikel
         name: title
         widget: string
+      - label: Custom URL Slug
+        name: slug
+        widget: string
+        required: false
+        hint: "Kosongkan saja jika ingin URL otomatis mengikuti Judul Artikel"
       - label: Tanggal Publikasi
         name: date
         widget: datetime
