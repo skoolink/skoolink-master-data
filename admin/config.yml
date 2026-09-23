@@ -62,7 +62,7 @@ collections:
             value: manajemen-administrasi
           - label: Hubungan Orang Tua & Sekolah
             value: parenting-komunikasi
-          - label: Berita & Informas
+          - label: Berita & Informasi
             value: berita-update
       - label: Tags
         name: tags
