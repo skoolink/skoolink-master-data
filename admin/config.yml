@@ -68,10 +68,6 @@ collections:
         name: Tags
         widget: list
         required: false
-        field:
-            label: Nama Tag
-            name: tag
-            widget: string
       - label: Konten Artikel
         name: body
         widget: richtext
