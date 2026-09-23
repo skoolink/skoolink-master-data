@@ -99,6 +99,10 @@ collections:
             label: Teks Tambahan Banner
             widget: string
             required: false
+      - label: Deskripsi Promo
+        name: body
+        widget: richtext 
+        required: false
             
       - label: Contact Info
         name: contact_info
