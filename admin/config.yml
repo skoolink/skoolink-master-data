@@ -64,8 +64,8 @@ collections:
             value: parenting-komunikasi
           - label: Berita & Informas
             value: berita-update
-      - label: tags
-        name: Tags
+      - label: Tags
+        name: tags
         widget: list
         required: false
       - label: Konten Artikel
