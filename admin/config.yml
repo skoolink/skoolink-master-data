@@ -71,6 +71,7 @@ collections:
         name: tags
         widget: list
         required: false
+        multiple: true
       - label: Konten Artikel
         name: body
         widget: richtext
