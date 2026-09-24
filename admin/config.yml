@@ -63,13 +63,10 @@ collections:
         max: 1 
         options:
           - label: Digitalisasi Sekolah
-            value: digitalisasi-sekolah
           - label: Manajemen & Administrasi
-            value: manajemen-administrasi
           - label: Hubungan Orang Tua & Sekolah
-            value: parenting-komunikasi
           - label: Berita & Informasi
-            value: berita-update
+            value: Berita & Informasi
       - label: Tags
         name: tags
         widget: list
