@@ -27,9 +27,9 @@ public_folder: /img
 
 
 collections:
-  - name: poin-unggulan
-    label: Poin Unggulan
-    folder: poin-unggulan
+  - name: benefits-list
+    label: Daftar Poin Keunggulan
+    folder: content/benefits-list
     editor:
       preview: false
     fields:
@@ -48,11 +48,7 @@ collections:
       - name: footer_note
         label: Catatan Kaki
         widget: string
-        required: false
-      - name: datalain
-        label: Data Tambahan
-        widget: keyvalue
-        required: false
+        required: false 
 
   - name: blog
     label: Blog
@@ -100,18 +96,6 @@ collections:
       - label: Konten Artikel
         name: body
         widget: richtext
-      - label: Warna Background
-        name: background_color
-        widget: color
-        enableAlpha: true
-        allowInput: true
-        default: '#00000090'
-      - label: Warna Teks
-        name: color
-        widget: color
-        enableAplha: false
-        allowInput: false
-        default: '#ffffff'
         
   - name: promo
     label: Promo
@@ -154,24 +138,11 @@ collections:
         widget: string  
       - label: Daftar Poin Keunggulan
         name: benefits
-        widget: list
-        fields:
-          - name: badge
-            label: Badge
-            widget: string
-          - name: description
-            label: Deskripsi
-            widget: string
-          - name: icon
-            label: Ikon FontAwesome
-            widget: string
-          - name: title
-            label: Judul Keuntungan
-            widget: string
-          - name: footer_note
-            label: Catatan Kaki
-            widget: string
-            required: false
+        widget: relation
+        collection: benefits-list
+        value_field: slug
+        display_fields: [title]
+        search_fields: [title, description]
             
       - label: Banner Sorotan
         name: quote_box
