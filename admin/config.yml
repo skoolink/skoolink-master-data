@@ -38,11 +38,36 @@ collections:
       preview: false
     fields:
       - name: theme
-        Label: Pilih Tema
+        label: Pilih Tema
         widget: boolean
+        required: false
         default: true
         before_input: "Light Mode"
         after_input: "Dark Mode"
+      - name: code1
+        label: Kode 1
+        widget: code
+      - name: code2
+        label: Kode 2
+        widget: code
+        output_code_only: false
+      - name: code3
+        label: Kode 3
+        widget: code
+        output_code_only: true
+      - name: code4
+        label: Kode 4
+        widget: code
+        allow_language_selection: false
+      - name: code5
+        label: Kode 5
+        widget: code
+        allow_language_selection: true
+      - name: code6
+        label: Kode 6
+        widget: code
+        default_language: javascript
+      
         
   - name: blog
     label: Blog
