@@ -68,7 +68,7 @@ collections:
         name: slug
         widget: string
         required: false
-        hint: "Kosongkan saja jika ingin URL otomatis mengikuti Judul Artikel"
+        hint: Kosongkan saja jika ingin URL otomatis mengikuti Judul Artikel.
       - label: Tanggal Publikasi
         name: date
         widget: datetime
@@ -111,6 +111,7 @@ collections:
       - label: Judul Promo
         name: title
         widget: string
+        hint: Judul utama promo yang tampil di halaman & pesan WhatsApp.
       - label: Tanggal Publikasi
         name: date
         widget: datetime
@@ -120,10 +121,11 @@ collections:
       - label: Status Promo Berakhir?
         name: expired
         widget: boolean
-      - label: Label / Tag Promo
+        hint: Aktifkan jika promo sudah berakhir.
+      - label: Badge Tag Promo
         name: badge
         widget: string 
-      - label: Ringkasan Singkat
+      - label: Ringkasan (Summary)
         name: summary
         widget: text  
       - label: Poster / Flyer Promo
