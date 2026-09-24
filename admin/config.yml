@@ -77,13 +77,13 @@ collections:
         widget: color
         allowInput: false
         enableAlpha: false
-        default: '#13131390'
+        default: '#131313'
       - name: color
         label: Warna Teks
         widget: color
         allowInput: true
         enableAplha: true
-        default: '#999999'
+        default: '#ffffff50'
 
         
       
