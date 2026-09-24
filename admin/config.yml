@@ -37,8 +37,8 @@ collections:
     editor:
       preview: false
     fields:
-      - name: theme
-        label: Pilih Tema
+      - name: darkmode
+        label: Gunakan Tema Darkmode?
         widget: boolean
         required: false
         default: true
