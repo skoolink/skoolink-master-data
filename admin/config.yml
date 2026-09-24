@@ -89,8 +89,9 @@ collections:
   - name: promo
     label: Promo
     folder: content/promo
-    media_folder: static/img/promo
-    public_folder: /img/promo
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
     editor:
       preview: false
     fields:
