@@ -27,30 +27,6 @@ public_folder: /img
 
 
 collections:
-  - name: benefits-list
-    label: Poin Keunggulan
-    folder: content/benefits-list
-    path: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - name: title
-        label: Judul Keuntungan
-        widget: string
-      - name: badge
-        label: Badge
-        widget: string
-      - name: description
-        label: Deskripsi
-        widget: string
-      - name: icon
-        label: Ikon FontAwesome
-        widget: string
-      - name: footer_note
-        label: Catatan Kaki
-        widget: string
-        required: false 
-
   - name: blog
     label: Blog
     folder: content/blog
@@ -115,9 +91,11 @@ collections:
       - label: Tanggal Publikasi
         name: date
         widget: datetime
+        hint: Tanggal artikel promo diterbitkan di web.
       - label: Periode / Masa Berlaku
         name: offer_period
         widget: datetime
+        hint: Tanggal terakhir promo berlaku.
       - label: Status Promo Berakhir?
         name: expired
         widget: boolean
@@ -125,22 +103,35 @@ collections:
       - label: Badge Tag Promo
         name: badge
         widget: string 
+        default: "PROMO EKSKLUSIF" 
+        required: false
+        hint: Teks label kecil di atas judul (cth: PROMO SEPTEMBER CERIA).
       - label: Ringkasan (Summary)
         name: summary
         widget: text  
+        hint: Penjelasan singkat 1-2 kalimat di bawah judul.
       - label: Poster / Flyer Promo
         name: image
         widget: image 
+        hint: Unggah flyer/poster.
+        
       - label: Ringkasan Paket Penawaran
         name: offer_title
         widget: string
+        required: false
+        hint: Versi singkat judul promo di bar kontak bawah. Kosongkan untuk menggunakan Judul Promo.
       - label: Judul Seksi Keunggulan
         name: benefits_title
         widget: string 
+        required: false
+        hint: Kosongkan untuk menggunakan standar: 'Sekolah Anda Akan Mendapatkan:'
       - label: Deskripsi Seksi Keunggulan
         name: benefits_subtitle
-        widget: string  
-      - label: Poin Keunggulan
+        widget: string 
+        required: false
+        hint: Kosongkan untuk menggunakan deskripsi standar bawaan sistem.
+        
+      - label: Daftar Keuntungan Promo
         name: benefits
         widget: relation
         multiple: true
@@ -148,29 +139,36 @@ collections:
         value_field: '{{slug}}'
         display_fields: [title]
         search_fields: [title, description]
+        hint: Pilih satu atau beberapa poin keunggulan yang didapatkan pada promo ini.
             
-      - label: Banner Sorotan
+      - label: Banner Highlight (Hijau)
         name: quote_box
         widget: object 
         required: false
+        hint: Isi jika ingin menampilkan banner ajakan/penawaran ekstra di bawah hero.
         fields:
           - name: title
             label: Judul Ajakan / Tagline
             widget: string
             required: false
+            hint: Cth: Eksklusif Bulan Ini!
           - name: subtext
             label: Teks Tambahan Banner
             widget: string
             required: false
-      - label: Deskripsi Promo
+            hint: Cth: Dapatkan potongan hingga 50%.
+            
+      - label: Konten Tambahan (Syarat & Ketentuan)
         name: body
         widget: richtext 
         required: false
+        hint: Isi jika ada syarat, ketentuan, atau penjelasan detail dalam bentuk artikel/teks.
             
       - label: Contact Info
         name: contact_info
         widget: object
         required: false
+        hint: OPSIONAL: Hanya isi jika promo ini menggunakan CS/Email khusus. Jika dikosongkan, akan otomatis menggunakan kontak utama Skoolink.
         fields:
           - name: email
             label: Email Khusus Promo
@@ -184,6 +182,31 @@ collections:
             label: Tautan Web Khusus
             widget: string
             required: false
+
+        
+  - name: benefits-list
+    label: Poin Keunggulan
+    folder: content/benefits-list
+    path: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - name: title
+        label: Judul Keuntungan
+        widget: string
+      - name: badge
+        label: Badge
+        widget: string
+      - name: description
+        label: Deskripsi
+        widget: string
+      - name: icon
+        label: Ikon FontAwesome
+        widget: string
+      - name: footer_note
+        label: Catatan Kaki
+        widget: string
+        required: false 
         
         
       
