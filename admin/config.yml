@@ -140,7 +140,7 @@ collections:
         name: benefits
         widget: relation
         collection: benefits-list
-        value_field: slug
+        value_field: '{{slug}}'
         display_fields: [title]
         search_fields: [title, description]
             
