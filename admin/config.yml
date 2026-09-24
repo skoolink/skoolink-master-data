@@ -105,7 +105,7 @@ collections:
         widget: string 
         default: "PROMO EKSKLUSIF" 
         required: false
-        hint: Teks label kecil di atas judul (cth: PROMO SEPTEMBER CERIA).
+        hint: "Teks label kecil di atas judul (cth: PROMO SEPTEMBER CERIA)."
       - label: Ringkasan (Summary)
         name: summary
         widget: text  
@@ -124,7 +124,7 @@ collections:
         name: benefits_title
         widget: string 
         required: false
-        hint: Kosongkan untuk menggunakan standar: 'Sekolah Anda Akan Mendapatkan:'
+        hint: "Kosongkan untuk menggunakan standar: 'Sekolah Anda Akan Mendapatkan:'"
       - label: Deskripsi Seksi Keunggulan
         name: benefits_subtitle
         widget: string 
@@ -151,12 +151,12 @@ collections:
             label: Judul Ajakan / Tagline
             widget: string
             required: false
-            hint: Cth: Eksklusif Bulan Ini!
+            hint: "Cth: Eksklusif Bulan Ini!"
           - name: subtext
             label: Teks Tambahan Banner
             widget: string
             required: false
-            hint: Cth: Dapatkan potongan hingga 50%.
+            hint: "Cth: Dapatkan potongan hingga 50%."
             
       - label: Konten Tambahan (Syarat & Ketentuan)
         name: body
@@ -168,7 +168,7 @@ collections:
         name: contact_info
         widget: object
         required: false
-        hint: OPSIONAL: Hanya isi jika promo ini menggunakan CS/Email khusus. Jika dikosongkan, akan otomatis menggunakan kontak utama Skoolink.
+        hint: "OPSIONAL: Hanya isi jika promo ini menggunakan CS/Email khusus. Jika dikosongkan, akan otomatis menggunakan kontak utama Skoolink."
         fields:
           - name: email
             label: Email Khusus Promo
