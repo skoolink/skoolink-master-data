@@ -27,6 +27,23 @@ public_folder: /img
 
 
 collections:
+  - name: latihan
+    label: Latihan CMS
+    folder: content/
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - name: theme
+        Label: Pilih Tema
+        widget: boolean
+        default: true
+        before_input: "Light Mode"
+        after_input: "Dark Mode"
+        
   - name: blog
     label: Blog
     folder: content/blog
