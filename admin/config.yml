@@ -184,29 +184,29 @@ collections:
             required: false
 
         
-  - name: benefits-list
-    label: Poin Keunggulan
-    folder: content/benefits-list
-    path: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - name: title
-        label: Judul Keuntungan
-        widget: string
-      - name: badge
-        label: Badge
-        widget: string
-      - name: description
-        label: Deskripsi
-        widget: string
-      - name: icon
-        label: Ikon FontAwesome
-        widget: string
-      - name: footer_note
-        label: Catatan Kaki
-        widget: string
-        required: false 
+      - name: benefits-list
+        label: Poin Keunggulan
+        folder: content/benefits-list
+        path: "{{slug}}"
+        editor:
+          preview: false
+        fields:
+          - name: title
+            label: Judul Keuntungan
+            widget: string
+          - name: badge
+            label: Badge
+            widget: string
+          - name: description
+            label: Deskripsi
+            widget: string
+          - name: icon
+            label: Ikon FontAwesome
+            widget: string
+          - name: footer_note
+            label: Catatan Kaki
+            widget: string
+            required: false 
         
         
       
