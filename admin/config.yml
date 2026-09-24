@@ -71,7 +71,6 @@ collections:
         label: Kode 6
         widget: code
         default_language: javascript
-
       - name: background-color
         label: Warna Background
         widget: color
@@ -84,8 +83,7 @@ collections:
         allowInput: true
         enableAlpha: true
         default: '#ffffff'
-
-       - name: background-color2
+      - name: background-color2
         label: Warna Background
         widget: color
         allowInput: false
