@@ -33,6 +33,9 @@ collections:
     editor:
       preview: false
     fields:
+      - name: title
+        label: Judul Keuntungan
+        widget: string
       - name: badge
         label: Badge
         widget: string
@@ -41,9 +44,6 @@ collections:
         widget: string
       - name: icon
         label: Ikon FontAwesome
-        widget: string
-      - name: title
-        label: Judul Keuntungan
         widget: string
       - name: footer_note
         label: Catatan Kaki
