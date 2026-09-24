@@ -28,7 +28,7 @@ public_folder: /img
 
 collections:
   - name: benefits-list
-    label: Daftar Poin Keunggulan
+    label: Poin Keunggulan
     folder: content/benefits-list
     editor:
       preview: false
@@ -53,8 +53,9 @@ collections:
   - name: blog
     label: Blog
     folder: content/blog
-    media_folder: static/img/blog
-    public_folder: /img/blog
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
     slug: '{{slug}}'
     editor:
       preview: false
@@ -83,7 +84,7 @@ collections:
         name: categories
         widget: select
         multiple: true
-        max: 2
+        max: 1
         options:
           - Digitalisasi Sekolah
           - Manajemen & Administrasi
@@ -136,7 +137,7 @@ collections:
       - label: Deskripsi Seksi Keunggulan
         name: benefits_subtitle
         widget: string  
-      - label: Daftar Poin Keunggulan
+      - label: Poin Keunggulan
         name: benefits
         widget: relation
         multiple: true
