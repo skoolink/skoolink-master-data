@@ -28,7 +28,7 @@ public_folder: /img
 
 collections:
   - name: poin-unggulan
-    label: Point Unggulan
+    label: Poin Unggulan
     folder: poin-unggulan
     editor:
       preview: false
@@ -48,6 +48,10 @@ collections:
       - name: footer_note
         label: Catatan Kaki
         widget: string
+        required: false
+      - name: datalain
+        label: Data Tambahan
+        widget: keyvalue
         required: false
 
   - name: blog
