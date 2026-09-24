@@ -37,6 +37,10 @@ collections:
     editor:
       preview: false
     fields:
+      - name: title
+        label: Judul
+        widget: string
+        required: false
       - name: darkmode
         label: Gunakan Tema Darkmode?
         widget: boolean
@@ -67,6 +71,21 @@ collections:
         label: Kode 6
         widget: code
         default_language: javascript
+
+      - name: background-color
+        label: Warna Background
+        widget: color
+        allowInput: false
+        enableAlpha: false
+        default: '#13131390'
+      - name: color
+        label: Warna Teks
+        widget: color
+        allowInput: true
+        enableAplha: true
+        default: '#999999'
+
+        
       
         
   - name: blog
