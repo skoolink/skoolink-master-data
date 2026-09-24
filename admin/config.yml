@@ -27,6 +27,29 @@ public_folder: /img
 
 
 collections:
+  - name: poin-unggulan
+    label: Point Unggulan
+    folder: poin-unggulan
+    editor:
+      preview: false
+    fields:
+      - name: badge
+        label: Badge
+        widget: string
+      - name: description
+        label: Deskripsi
+        widget: string
+      - name: icon
+        label: Ikon FontAwesome
+        widget: string
+      - name: title
+        label: Judul Keuntungan
+        widget: string
+      - name: footer_note
+        label: Catatan Kaki
+        widget: string
+        required: false
+
   - name: blog
     label: Blog
     folder: content/blog
