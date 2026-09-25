@@ -107,10 +107,7 @@ collections:
         value: '{{fields.first_name}} {{fields.last_name}}'
       - name: whatsapp
         label: Nomor WhatsApp
-        widget: relation
-        collection: contact_info
-        value_field: name
-        display_field: name
+        widget: number
       - name: cta
         label: Hubungi Melalui WhatsApp
         widget: compute
