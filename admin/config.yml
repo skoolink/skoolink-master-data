@@ -107,11 +107,22 @@ collections:
         value: '{{fields.first_name}} {{fields.last_name}}'
       - name: whatsapp
         label: Nomor WhatsApp
-        widget: number
+        widget: string
       - name: cta
         label: Hubungi Melalui WhatsApp
         widget: compute
         value: 'https://wa.me/{{fields.whatsapp}}'
+      - name: username
+        label: Username
+        widget: compute
+        value: '{{fields.first_name}}{{fields.last_name}}'
+      - name: url
+        label: URL
+        widget: compute
+        value: 'https://conime.id/u/{{fields.username}}{{uuid}}
+
+      
+        
         
         
 
