@@ -95,6 +95,28 @@ collections:
         allowInput: true
         enableAlpha: true
         default: '#ffffff50'
+      - name: first_name
+        label: Nama Depan
+        widget: string
+      - name: last_name
+        label: Name Belakang
+        widget: string
+      - name: full_name
+        label: Name Lengkap
+        widget: compute
+        value: '{{fields.first_name}} {{fields.last_name}}'
+      - name: whatsapp
+        label: Nomor WhatsApp
+        widget: relation
+        collection: contact_info
+        value_field: name
+        display_field: name
+      - name: cta
+        label: Hubungi Melalui WhatsApp
+        widget: compute
+        value: 'https://wa.me/{{fields.whatsapp}}'
+        
+        
 
         
       
