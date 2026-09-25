@@ -119,7 +119,7 @@ collections:
       - name: url
         label: URL
         widget: compute
-        value: 'https://conime.id/u/{{fields.username}}{{uuid}}
+        value: 'https://conime.id/u/{{fields.username}}{{uuid}}'
 
       
         
