@@ -198,6 +198,7 @@ collections:
         accept: application/pdf,.pdf
       - name: gallery
         label: Gallery Photos
+        widget: file
         select_folder: true
       - name: profileId
         label: Profile ID
