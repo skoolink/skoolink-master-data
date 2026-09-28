@@ -145,15 +145,15 @@ collections:
         label: Tanggal Booking
         widget: datetime
         type: date
-        min: 2026-09-25
-        max: 2026-10-25
+        min: 2026-09-20
+        max: 2026-09-30
         step: 7
       - name: BookingTime
         label: Jam Booking
         widget: datetime
         type: time
-        min: '00:00'
-        max: '23:59'
+        min: '10:00'
+        max: '14:00'
         step: 900
       - name: eventTimeTimeZone
         label: Asia/Jakarta
