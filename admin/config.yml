@@ -152,8 +152,8 @@ collections:
         type: date
         min: 2026-09-20
         max: 2026-09-30
-        step: 7
-        hint: 'Ini tanggal saja min-max dan step 7'
+        step: 1
+        hint: 'Ini tanggal saja min-max dan step 1'
       - name: BookingTime
         label: Jam Booking
         widget: datetime
