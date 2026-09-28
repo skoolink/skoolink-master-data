@@ -186,6 +186,19 @@ collections:
         input_timezone: local
         outpu_utc: false
         hint: 'Ini input local dan output UTC false'
+      - name: document
+        label: Dokumen
+        widget: file
+      - name: multipleDoc
+        label: Upload banyak Dokumen
+        widget: file
+        multiple: true
+        min: 1
+        max: 5
+        accept: application/pdf,.pdf
+      - name: gallery
+        label: Gallery Photos
+        select_folder: true
       
 
       
