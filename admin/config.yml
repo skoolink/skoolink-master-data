@@ -199,6 +199,14 @@ collections:
       - name: gallery
         label: Gallery Photos
         select_folder: true
+      - name: profileId
+        label: Profile ID
+        widget: hidden
+        default: '{{short_uuid}}'
+      - name: writter
+        label: Penulis
+        widget: hidden
+        deafult: '{{author-name}}'
       
 
       
