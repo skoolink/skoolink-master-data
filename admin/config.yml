@@ -120,6 +120,57 @@ collections:
         label: URL
         widget: compute
         value: 'https://conime.id/u/{{fields.username}}{{uuid_short}}'
+      - name: evenDateTime
+        label: Tanggal dan Jam Acara
+        widget: datetime
+      - name: eventDate
+        label: Tanggal Acara
+        widget: datetime
+        type: date
+      - name: eventTime
+        label: Jam Acara
+        widget: datetime
+        type: time
+      - name: eventDateUTC
+        label: Tanggal dan Jam Acara (UTC)
+        widget: datetime
+        picker_utc: true
+        default: '{{now}}
+      - name: eventDateNoUTC
+        label: Tanggal dan Jam Acara (noUTC)
+        widhet: datetime
+        picker_utc: false
+        format: HH:mm MM/DD/YYYY
+      - name: bookingDate
+        label: Tanggal Booking
+        widget: datetime
+        type: date
+        min: 2026-09-25
+        max: 2026-10-25
+        step: 7
+      - name: BookingTime
+        label: Jam Booking
+        widget: datetime
+        type: time
+        min: 00:00
+        max: 23:59
+        step: 900
+      - name: eventTimeTimeZone
+        label: Asia/Jakarta
+        widget: datetime
+        input_timezone: Asia/Jakarta
+      - name: eventTimeUTC
+        label: Event Time
+        widget: datetime
+        input_timezone: Asia/Jakarta
+        output_utc: true
+      - name: publishTime
+        label: Waktu Publish
+        widget: datetime
+        input_timezone: local
+        output_utc: true
+        format: YYYY/MM/DD HH:mm
+      
 
       
         
