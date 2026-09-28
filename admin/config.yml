@@ -123,24 +123,29 @@ collections:
       - name: evenDateTime
         label: Tanggal dan Jam Acara
         widget: datetime
+        hint: 'Ini pengisian tanggal dan jam'
       - name: eventDate
         label: Tanggal Acara
         widget: datetime
         type: date
+        hint: 'Ini pengisian tanggal saja'
       - name: eventTime
         label: Jam Acara
         widget: datetime
         type: time
+        hint: 'Ini pengisian jam saja'
       - name: eventDateUTC
         label: Tanggal dan Jam Acara (UTC)
         widget: datetime
         picker_utc: true
         default: '{{now}}'
+        hint: 'Ini menggunakan Picker UTC dan default Now'
       - name: eventDateNoUTC
         label: Tanggal dan Jam Acara (noUTC)
         widget: datetime
         picker_utc: false
         format: 'HH:mm MM/DD/YYYY'
+        hint: 'Ini Picker UTC false, dan format HH:mm MM/DD/YYYY'
       - name: bookingDate
         label: Tanggal Booking
         widget: datetime
@@ -148,6 +153,7 @@ collections:
         min: 2026-09-20
         max: 2026-09-30
         step: 7
+        hint: 'Ini tanggal saja min-max dan step 7'
       - name: BookingTime
         label: Jam Booking
         widget: datetime
@@ -155,21 +161,31 @@ collections:
         min: '10:00'
         max: '14:00'
         step: 900
+        hint: 'Ini Jam saja min-max dan step 900'
       - name: eventTimeTimeZone
         label: Asia/Jakarta
         widget: datetime
         input_timezone: Asia/Jakarta
+        hint: 'ini datetime Asis/Jakarta'
       - name: eventTimeUTC
         label: Event Time
         widget: datetime
         input_timezone: Asia/Jakarta
         output_utc: true
+        hint: 'Ini input Asia/Jakarta output UTC true'
       - name: publishTime
         label: Waktu Publish
         widget: datetime
         input_timezone: local
         output_utc: true
         format: YYYY/MM/DD HH:mm
+        hint: 'Ini input Lokal output UTC true'
+      - name: publishTimeLocal
+        label: Waktu Publish Lokal
+        widget: datetime
+        input_timezone: local
+        outpu_utc: false
+        hint: 'Ini input local dan output UTC false'
       
 
       
