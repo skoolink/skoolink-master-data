@@ -135,12 +135,12 @@ collections:
         label: Tanggal dan Jam Acara (UTC)
         widget: datetime
         picker_utc: true
-        default: '{{now}}
+        default: '{{now}}'
       - name: eventDateNoUTC
         label: Tanggal dan Jam Acara (noUTC)
-        widhet: datetime
+        widget: datetime
         picker_utc: false
-        format: HH:mm MM/DD/YYYY
+        format: 'HH:mm MM/DD/YYYY'
       - name: bookingDate
         label: Tanggal Booking
         widget: datetime
@@ -152,8 +152,8 @@ collections:
         label: Jam Booking
         widget: datetime
         type: time
-        min: 00:00
-        max: 23:59
+        min: '00:00'
+        max: '23:59'
         step: 900
       - name: eventTimeTimeZone
         label: Asia/Jakarta
