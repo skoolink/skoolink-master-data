@@ -203,9 +203,9 @@ collections:
       - name: profileId
         label: Profile ID
         widget: hidden
-        default: '{{short_uuid}}'
-      - name: writter
-        label: Penulis
+        default: '{{uuid_short}}'
+      - name: author_name
+        label: Author
         widget: hidden
         deafult: '{{author-name}}'
       
