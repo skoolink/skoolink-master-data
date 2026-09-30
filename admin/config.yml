@@ -405,7 +405,7 @@ collections:
   - name: schools
     label: Schools
     icon: school
-    folder: /schools
+    folder: /content/schools
     path: "{{slug}}/index"
     identifier_field: code
     summary: "{{code}} {{name}}"
