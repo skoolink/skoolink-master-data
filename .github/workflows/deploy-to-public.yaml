@@ -15,10 +15,18 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v6
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Admin
         uses: JamesIves/github-pages-deploy-action@v4.7.6
         with:
           folder: admin
           target-folder: admin
           branch: public
           force: false # dari banyak sumber
+
+      - name: Deploy Admin Edit
+        uses: JamesIves/github-pages-deploy-action@v4.7.6
+        with:
+          folder: admin-edit
+          target-folder: admin-edit
+          branch: public
+          force: false
