@@ -1,0 +1,584 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+logo:
+  src: skoolink.png
+  show_in_header: true
+
+media_libraries:
+  all:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 85
+        width: 1024
+        height: 1024
+      svg:
+        optimize: true
+
+app_title: Master Data Skoolink
+
+backend:
+  name: github
+  repo: skoolink/skoolink-site
+  branch: edit
+  base_url: https://skoolink-auth.gorraboo.workers.dev/
+
+media_folder: static/img
+public_folder: /img
+
+
+collections:
+  - name: latihan
+    label: Latihan CMS
+    folder: content/latihan
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - name: title
+        label: Judul
+        widget: string
+        required: false
+      - name: darkmode
+        label: Gunakan Tema Darkmode?
+        widget: boolean
+        required: false
+        default: true
+        before_input: "Light Mode"
+        after_input: "Dark Mode"
+      - name: code1
+        label: Kode 1
+        widget: code
+      - name: code2
+        label: Kode 2
+        widget: code
+        output_code_only: false
+      - name: code3
+        label: Kode 3
+        widget: code
+        output_code_only: true
+      - name: code4
+        label: Kode 4
+        widget: code
+        allow_language_selection: false
+      - name: code5
+        label: Kode 5
+        widget: code
+        allow_language_selection: true
+      - name: code6
+        label: Kode 6
+        widget: code
+        default_language: javascript
+      - name: background-color
+        label: Warna Background
+        widget: color
+        allowInput: false
+        enableAlpha: false
+        default: '#13131350'
+      - name: color
+        label: Warna Teks
+        widget: color
+        allowInput: true
+        enableAlpha: true
+        default: '#ffffff'
+      - name: background-color2
+        label: Warna Background
+        widget: color
+        allowInput: false
+        enableAlpha: false
+        default: '#131313'
+      - name: color2
+        label: Warna Teks
+        widget: color
+        allowInput: true
+        enableAlpha: true
+        default: '#ffffff50'
+      - name: first_name
+        label: Nama Depan
+        widget: string
+      - name: last_name
+        label: Name Belakang
+        widget: string
+      - name: full_name
+        label: Name Lengkap
+        widget: compute
+        value: '{{fields.first_name}} {{fields.last_name}}'
+      - name: whatsapp
+        label: Nomor WhatsApp
+        widget: string
+      - name: cta
+        label: Hubungi Melalui WhatsApp
+        widget: compute
+        value: 'https://wa.me/{{fields.whatsapp}}'
+      - name: username
+        label: Username
+        widget: compute
+        value: '{{fields.first_name}}{{fields.last_name}}'
+      - name: url
+        label: URL
+        widget: compute
+        value: 'https://conime.id/u/{{fields.username}}{{uuid_short}}'
+      - name: evenDateTime
+        label: Tanggal dan Jam Acara
+        widget: datetime
+        hint: 'Ini pengisian tanggal dan jam'
+      - name: eventDate
+        label: Tanggal Acara
+        widget: datetime
+        type: date
+        hint: 'Ini pengisian tanggal saja'
+      - name: eventTime
+        label: Jam Acara
+        widget: datetime
+        type: time
+        hint: 'Ini pengisian jam saja'
+      - name: eventDateUTC
+        label: Tanggal dan Jam Acara (UTC)
+        widget: datetime
+        picker_utc: true
+        default: '{{now}}'
+        hint: 'Ini menggunakan Picker UTC dan default Now'
+      - name: eventDateNoUTC
+        label: Tanggal dan Jam Acara (noUTC)
+        widget: datetime
+        picker_utc: false
+        format: 'HH:mm MM/DD/YYYY'
+        hint: 'Ini Picker UTC false, dan format HH:mm MM/DD/YYYY'
+      - name: bookingDate
+        label: Tanggal Booking
+        widget: datetime
+        type: date
+        min: 2026-09-20
+        max: 2026-09-30
+        step: 1
+        hint: 'Ini tanggal saja min-max dan step 1'
+      - name: BookingTime
+        label: Jam Booking
+        widget: datetime
+        type: time
+        min: '10:00'
+        max: '14:00'
+        step: 900
+        hint: 'Ini Jam saja min-max dan step 900'
+      - name: eventTimeTimeZone
+        label: Asia/Jakarta
+        widget: datetime
+        input_timezone: Asia/Jakarta
+        hint: 'ini datetime Asis/Jakarta'
+      - name: eventTimeUTC
+        label: Event Time
+        widget: datetime
+        input_timezone: Asia/Jakarta
+        output_utc: true
+        hint: 'Ini input Asia/Jakarta output UTC true'
+      - name: publishTime
+        label: Waktu Publish
+        widget: datetime
+        input_timezone: local
+        output_utc: true
+        format: YYYY/MM/DD HH:mm
+        hint: 'Ini input Lokal output UTC true'
+      - name: publishTimeLocal
+        label: Waktu Publish Lokal
+        widget: datetime
+        input_timezone: local
+        outpu_utc: false
+        hint: 'Ini input local dan output UTC false'
+      - name: document
+        label: Dokumen
+        widget: file
+      - name: multipleDoc
+        label: Upload banyak Dokumen
+        widget: file
+        multiple: true
+        min: 1
+        max: 5
+        accept: application/pdf
+      - name: gallery
+        label: Gallery Photos
+        widget: file
+        select_folder: true
+      - name: profileId
+        label: Profile ID
+        widget: hidden
+        default: '{{uuid_short}}'
+      - name: author_name
+        label: Author
+        widget: hidden
+        deafult: '{{author-name}}'
+      
+
+      
+        
+        
+        
+
+        
+      
+        
+  - name: blog
+    label: Blog
+    folder: content/blog
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - label: Judul Artikel
+        name: title
+        widget: string
+      - label: Custom URL Slug
+        name: slug
+        widget: string
+        required: false
+        hint: Kosongkan saja jika ingin URL otomatis mengikuti Judul Artikel.
+      - label: Tanggal Publikasi
+        name: date
+        widget: datetime
+      - label: Author
+        name: author
+        widget: string
+      - label: Gambar Artikel
+        name: image
+        widget: image
+      - label: Ringkasan Artikel
+        name: summary
+        widget: text
+      - label: Kategori Utama
+        name: categories
+        widget: select
+        multiple: true
+        max: 1
+        options:
+          - Digitalisasi Sekolah
+          - Manajemen & Administrasi
+          - Hubungan Orang Tua & Sekolah
+          - Berita & Informasi
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+        multiple: true
+      - label: Konten Artikel
+        name: body
+        widget: richtext
+        
+  - name: promo
+    label: Promo
+    folder: content/promo
+    path: "{{slug}}/index"
+    media_folder: .
+    public_folder: .
+    editor:
+      preview: false
+    fields:
+      - label: Judul Promo
+        name: title
+        widget: string
+        hint: Judul utama promo yang tampil di halaman & pesan WhatsApp.
+      - label: Tanggal Publikasi
+        name: date
+        widget: datetime
+        hint: Tanggal artikel promo diterbitkan di web.
+      - label: Periode / Masa Berlaku
+        name: offer_period
+        widget: datetime
+        hint: Tanggal terakhir promo berlaku.
+      - label: Status Promo Berakhir?
+        name: expired
+        widget: boolean
+        hint: Aktifkan jika promo sudah berakhir.
+      - label: Badge Tag Promo
+        name: badge
+        widget: string 
+        default: "PROMO EKSKLUSIF" 
+        required: false
+        hint: "Teks label kecil di atas judul (cth: PROMO SEPTEMBER CERIA)."
+      - label: Ringkasan (Summary)
+        name: summary
+        widget: text  
+        hint: Penjelasan singkat 1-2 kalimat di bawah judul.
+      - label: Poster / Flyer Promo
+        name: image
+        widget: image 
+        hint: Unggah flyer/poster.
+        
+      - label: Ringkasan Paket Penawaran
+        name: offer_title
+        widget: string
+        required: false
+        hint: Versi singkat judul promo di bar kontak bawah. Kosongkan untuk menggunakan Judul Promo.
+      - label: Judul Seksi Keunggulan
+        name: benefits_title
+        widget: string 
+        required: false
+        hint: "Kosongkan untuk menggunakan standar: 'Sekolah Anda Akan Mendapatkan:'"
+      - label: Deskripsi Seksi Keunggulan
+        name: benefits_subtitle
+        widget: string 
+        required: false
+        hint: Kosongkan untuk menggunakan deskripsi standar bawaan sistem.
+        
+      - label: Daftar Keuntungan Promo
+        name: benefits
+        widget: relation
+        multiple: true
+        collection: benefits-list
+        value_field: '{{slug}}'
+        display_fields: [title]
+        search_fields: [title, description]
+        hint: Pilih satu atau beberapa poin keunggulan yang didapatkan pada promo ini.
+            
+      - label: Banner Highlight (Hijau)
+        name: quote_box
+        widget: object 
+        required: false
+        hint: Isi jika ingin menampilkan banner ajakan/penawaran ekstra di bawah hero.
+        fields:
+          - name: title
+            label: Judul Ajakan / Tagline
+            widget: string
+            required: false
+            hint: "Cth: Eksklusif Bulan Ini!"
+          - name: subtext
+            label: Teks Tambahan Banner
+            widget: string
+            required: false
+            hint: "Cth: Dapatkan potongan hingga 50%."
+            
+      - label: Konten Tambahan (Syarat & Ketentuan)
+        name: body
+        widget: richtext 
+        required: false
+        hint: Isi jika ada syarat, ketentuan, atau penjelasan detail dalam bentuk artikel/teks.
+            
+      - label: Contact Info
+        name: contact_info
+        widget: object
+        required: false
+        hint: "OPSIONAL: Hanya isi jika promo ini menggunakan CS/Email khusus. Jika dikosongkan, akan otomatis menggunakan kontak utama Skoolink."
+        fields:
+          - name: email
+            label: Email Khusus Promo
+            widget: string
+            required: false
+          - name: phone
+            label: Nomor WhatsApp Khusus
+            widget: string
+            required: false
+          - name: website
+            label: Tautan Web Khusus
+            widget: string
+            required: false
+
+        
+  - name: benefits-list
+    label: Poin Keunggulan
+    folder: content/benefits-list
+    path: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - name: title
+        label: Judul Keuntungan
+        widget: string
+      - name: badge
+        label: Badge
+        widget: string
+      - name: description
+        label: Deskripsi
+        widget: string
+      - name: icon
+        label: Ikon FontAwesome
+        widget: string
+      - name: footer_note
+        label: Catatan Kaki
+        widget: string
+        required: false 
+        
+        
+      
+  - name: schools
+    label: Schools
+    icon: school
+    folder: /schools
+    path: "{{slug}}/index"
+    identifier_field: code
+    summary: "{{code}} {{name}}"
+    public_folder: .
+    media_folder: .
+    format: yaml
+    editor:
+      preview: false
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Code
+        name: code
+        maxlength: 4
+        widget: string
+        pattern:
+          - '^\d{4}$'
+          - "Harus diisi tepat 4 digit angka (contoh: 0001)"
+      - label: Domain
+        name: domain_name
+        widget: string
+        required: false
+        pattern:
+          - '^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$'
+          - "Masukkan nama domain yang valid (contoh: domain.com atau sub.domain.co.id)"
+      - label: Logo
+        name: logo
+        widget: image
+        required: false
+      - label: Note
+        name: note
+        widget: text
+        required: false
+      - label: Warna
+        name: warna
+        widget: color
+        required: false
+      - name: location
+        widget: map
+        type: Point
+        center: [106.827168,-6.1754049] 
+        zoom: 12
+        required: false
+
+  - divider: true
+
+  - name: administrative_area
+    label: Administrative Area
+    label_singular: Administrative Area
+    folder: /wilayah
+    identifier_field: data.code
+    summary: "{{slug}}/L{{meta.administrative_area_level}} at {{meta.updated_at}}"
+    format: json
+    editor:
+      preview: false
+    reorder:
+      key: weight
+    fields:
+      - label: Meta
+        name: meta
+        widget: object
+        fields:
+          - label: Level
+            name: administrative_area_level
+            widget: string
+          - label: Urutan
+            name: updated_at
+            widget: datetime
+      - label: Data
+        name: data
+        widget: list
+        summary: "summary {{code}} {{name}}"
+        collapsed: true
+        fields:
+          - label: Code
+            name: code
+            widget: string
+            maxlength: 5
+          - label: Name
+            name: name
+            widget: string
+
+  - name: provinces
+    label: Province
+    icon: map
+    folder: /provinces
+    identifier_field: code
+    summary: "{{code}} {{name}}"
+    format: yaml
+    editor:
+      preview: false
+    reorder:
+      key: weight
+    fields:
+      - { label: Level, name: administrative_area_level, value: 1, widget: hidden }
+      - { label: Urutan, name: updated_at, widget: hidden, default: "{{datetime}}" }
+      - label: Code
+        name: code
+        widget: string
+        maxlength: 2
+      - label: Name
+        name: name
+        widget: string
+      - name: map
+        widget: map
+        type: Point
+        center: [106.827168,-6.1754049] 
+        zoom: 11
+        required: false
+
+  - name: districts
+    label: District
+    icon: location_city
+    folder: /districts
+    identifier_field: code
+    summary: "{{slug}} {{name}}"
+    format: json
+    view_groups:
+      - field: province
+        label: Province
+    editor:
+      preview: false
+    reorder:
+      key: weight
+    fields:
+      - { label: Level, name: administrative_area_level, value: 2, widget: hidden }
+      - { label: Urutan, name: updated_at, widget: hidden, default: "{{datetime}}" }
+      - label: Province
+        name: province
+        widget: relation
+        collection: provinces
+        display_fields:
+        - code
+        - name
+      - label: Code
+        name: code
+        widget: string
+        maxlength: 5
+      - label: Name
+        name: name
+        widget: string
+
+  - divider: true
+
+  - name: team
+    label: Team
+    icon: group
+    identifier_field: name
+    path: '{{slug}}/index'
+    folder: /data-team
+    public_folder: .
+    media_folder: .
+    description: Informasi tentang team inalix
+    editor:
+      preview: false
+    fields:
+      - name: name
+        label: Username
+        widget: string
+        pattern:
+          - '^[a-zA-Z][a-zA-Z0-9]{2,11}$'
+          - "Username harus 3-12 karakter, diawali huruf, dan hanya boleh berisi huruf dan angka."
+      - name: fullname
+        widget: string
+      - name: birthday
+        widget: datetime
+      - name: division
+        widget: string
+        required: false
+      - name: photo
+        widget: image
+        required: false
+      - name: body
+        widget: richtext
+        required: false
