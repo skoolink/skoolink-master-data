@@ -166,7 +166,7 @@ collections:
         label: Asia/Jakarta
         widget: datetime
         input_timezone: Asia/Jakarta
-        hint: 'ini datetime Asis/Jakarta'
+        hint: 'ini datetime Asia/Jakarta'
       - name: eventTimeUTC
         label: Event Time
         widget: datetime
@@ -184,7 +184,7 @@ collections:
         label: Waktu Publish Lokal
         widget: datetime
         input_timezone: local
-        outpu_utc: false
+        output_utc: false
         hint: 'Ini input local dan output UTC false'
       - name: document
         label: Dokumen
