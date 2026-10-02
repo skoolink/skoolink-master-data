@@ -231,6 +231,10 @@ collections:
       - label: Judul Artikel
         name: title
         widget: string
+      - label: draft
+        name: Draft
+        widget: boolean
+        default: true
       - label: Custom URL Slug
         name: slug
         widget: string
@@ -280,6 +284,10 @@ collections:
         name: title
         widget: string
         hint: Judul utama promo yang tampil di halaman & pesan WhatsApp.
+      - label: draft
+        name: Draft
+        widget: boolean
+        default: true
       - label: Tanggal Publikasi
         name: date
         widget: datetime
