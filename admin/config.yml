@@ -292,6 +292,7 @@ collections:
       - label: Tanggal Publikasi
         name: date
         widget: datetime
+        format: "YYYY-MM-DDTHH:mm:ssZ" 
         input_timezone: Asia/Jakarta
         hint: Tanggal artikel promo diterbitkan di web.
       - label: Periode / Masa Berlaku
