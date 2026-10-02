@@ -243,7 +243,6 @@ collections:
       - label: Tanggal Publikasi
         name: date
         widget: datetime
-        widget: datetime
         input_timezone: Asia/Jakarta
       - label: Author
         name: author
