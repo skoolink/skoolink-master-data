@@ -243,6 +243,7 @@ collections:
       - label: Tanggal Publikasi
         name: date
         widget: datetime
+        format: "YYYY-MM-DDTHH:mm:ssZ" 
         input_timezone: Asia/Jakarta
       - label: Author
         name: author
@@ -298,6 +299,7 @@ collections:
       - label: Periode / Masa Berlaku
         name: offer_period
         widget: datetime
+        format: "YYYY-MM-DDTHH:mm:ssZ" 
         input_timezone: Asia/Jakarta
         hint: Tanggal terakhir promo berlaku.
       - label: Status Promo Berakhir?
