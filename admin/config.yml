@@ -393,6 +393,7 @@ collections:
   - name: benefits-list
     label: Poin Keunggulan
     folder: content/benefits-list
+    sortable_fields: []
     path: "{{slug}}"
     editor:
       preview: false
