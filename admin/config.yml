@@ -207,7 +207,7 @@ collections:
       - name: author_name
         label: Author
         widget: hidden
-        deafult: '{{author-name}}'
+        default: '{{author-name}}'
       
 
       
