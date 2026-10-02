@@ -301,6 +301,7 @@ collections:
         widget: datetime
         format: "YYYY-MM-DDTHH:mm:ssZ" 
         input_timezone: Asia/Jakarta
+        required: false
         hint: Tanggal terakhir promo berlaku.
       - label: Status Promo Berakhir?
         name: expired
