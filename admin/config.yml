@@ -244,6 +244,8 @@ collections:
         name: date
         widget: datetime
         input_timezone: Asia/Jakarta
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        output_utc: false
         default: '{{now}}'
       - label: Author
         name: author
@@ -294,12 +296,15 @@ collections:
         name: date
         widget: datetime
         input_timezone: Asia/Jakarta
+        format: "YYYY-MM-DDTHH:mm:ssZ"
         default: '{{now}}'
         hint: Tanggal artikel promo diterbitkan di web.
       - label: Periode / Masa Berlaku
         name: offer_period
         widget: datetime
         input_timezone: Asia/Jakarta
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        output_utc: false
         default: '{{now}}'
         hint: Tanggal terakhir promo berlaku.
       - label: Status Promo Berakhir?
