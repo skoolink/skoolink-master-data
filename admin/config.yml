@@ -28,15 +28,15 @@ public_folder: /img
 
 collections:
  - name: blog
-    label: Blog
-    folder: content/blog
-    path: "{{slug}}/index"
-    media_folder: .
-    public_folder: .
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
+   label: Blog
+   folder: content/blog
+   path: "{{slug}}/index"
+   media_folder: .
+   public_folder: .
+   slug: '{{slug}}'
+   editor:
+    preview: false
+   fields:
       - label: Judul Artikel
         name: title
         widget: string
@@ -82,15 +82,15 @@ collections:
         name: body
         widget: richtext
         
-  - name: promo
-    label: Promo
-    folder: content/promo
-    path: "{{slug}}/index"
-    media_folder: .
-    public_folder: .
-    editor:
+ - name: promo
+   label: Promo
+   folder: content/promo
+   path: "{{slug}}/index"
+   media_folder: .
+   public_folder: .
+   editor:
       preview: false
-    fields:
+   fields:
       - label: Judul Promo
         name: title
         widget: string
@@ -200,14 +200,14 @@ collections:
             required: false
 
         
-  - name: benefits-list
-    label: Poin Keunggulan
-    folder: content/benefits-list
-    sortable_fields: []
-    path: "{{slug}}"
-    editor:
-      preview: false
-    fields:
+ - name: benefits-list
+   label: Poin Keunggulan
+   folder: content/benefits-list
+   sortable_fields: []
+   path: "{{slug}}"
+   editor:
+   preview: false
+   fields:
       - name: title
         label: Judul Keuntungan
         widget: string
@@ -227,19 +227,19 @@ collections:
         
         
       
-  - name: schools
-    label: Schools
-    icon: school
-    folder: /content/schools
-    path: "{{slug}}/index"
-    identifier_field: code
-    summary: "{{code}} {{name}}"
-    public_folder: .
-    media_folder: .
-    format: yaml
-    editor:
-      preview: false
-    fields:
+ - name: schools
+   label: Schools
+   icon: school
+   folder: /content/schools
+   path: "{{slug}}/index"
+   identifier_field: code
+   summary: "{{code}} {{name}}"
+   public_folder: .
+   media_folder: .
+   format: yaml
+   editor:
+   preview: false
+   fields:
       - label: Name
         name: name
         widget: string
@@ -276,20 +276,20 @@ collections:
         zoom: 12
         required: false
 
-  - divider: true
+ - divider: true
 
-  - name: administrative_area
-    label: Administrative Area
-    label_singular: Administrative Area
-    folder: /wilayah
-    identifier_field: data.code
-    summary: "{{slug}}/L{{meta.administrative_area_level}} at {{meta.updated_at}}"
-    format: json
-    editor:
-      preview: false
-    reorder:
-      key: weight
-    fields:
+ - name: administrative_area
+   label: Administrative Area
+   label_singular: Administrative Area
+   folder: /wilayah
+   identifier_field: data.code
+   summary: "{{slug}}/L{{meta.administrative_area_level}} at {{meta.updated_at}}"
+   format: json
+   editor:
+   preview: false
+   reorder:
+   key: weight
+   fields:
       - label: Meta
         name: meta
         widget: object
@@ -314,18 +314,18 @@ collections:
             name: name
             widget: string
 
-  - name: provinces
-    label: Province
-    icon: map
-    folder: /provinces
-    identifier_field: code
-    summary: "{{code}} {{name}}"
-    format: yaml
-    editor:
-      preview: false
-    reorder:
-      key: weight
-    fields:
+ - name: provinces
+   label: Province
+   icon: map
+   folder: /provinces
+   identifier_field: code
+   summary: "{{code}} {{name}}"
+   format: yaml
+   editor:
+   preview: false
+   reorder:
+   key: weight
+   fields:
       - { label: Level, name: administrative_area_level, value: 1, widget: hidden }
       - { label: Urutan, name: updated_at, widget: hidden, default: "{{datetime}}" }
       - label: Code
@@ -342,21 +342,21 @@ collections:
         zoom: 11
         required: false
 
-  - name: districts
-    label: District
-    icon: location_city
-    folder: /districts
-    identifier_field: code
-    summary: "{{slug}} {{name}}"
-    format: json
-    view_groups:
+ - name: districts
+   label: District
+   icon: location_city
+   folder: /districts
+   identifier_field: code
+   summary: "{{slug}} {{name}}"
+   format: json
+   view_groups:
       - field: province
         label: Province
-    editor:
-      preview: false
-    reorder:
-      key: weight
-    fields:
+   editor:
+   preview: false
+   reorder:
+   key: weight
+   fields:
       - { label: Level, name: administrative_area_level, value: 2, widget: hidden }
       - { label: Urutan, name: updated_at, widget: hidden, default: "{{datetime}}" }
       - label: Province
@@ -374,20 +374,20 @@ collections:
         name: name
         widget: string
 
-  - divider: true
+ - divider: true
 
-  - name: team
-    label: Team
-    icon: group
-    identifier_field: name
-    path: '{{slug}}/index'
-    folder: /data-team
-    public_folder: .
-    media_folder: .
-    description: Informasi tentang team inalix
-    editor:
+ - name: team
+   label: Team
+   icon: group
+   identifier_field: name
+   path: '{{slug}}/index'
+   folder: /data-team
+   public_folder: .
+   media_folder: .
+   description: Informasi tentang team inalix
+   editor:
       preview: false
-    fields:
+   fields:
       - name: name
         label: Username
         widget: string
